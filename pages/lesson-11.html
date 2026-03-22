@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-
     <link rel="stylesheet" href="../assets/css/lesson.css" />
 
     <title>11 урок</title>
@@ -14,35 +13,15 @@
       <div class="code">
         <div class="code__fragment">
           <h2 class="code__from">app.py</h2>
-          <pre>
-            # ===================== Сегодня можно не запоминать и не трогать =====================
-            from flask import Flask, render_template # Добавление нужных инструментов из библиотеки
-            Flask app = Flask(__name__) # Создание нашего приложения
-            #====================================================================================
-
-            # ====================== Наш основной блок, с которым работаем =======================
-            @app.route("/") # табличка с адресом нужной страницы сайта
-                    def home():
-                    return render_template("home.html", hp=75)
-
-            @app.route("/hello") # табличка с адресом нужной страницы сайта
-                    def hello():
-                    return render_template("hello.html")
-            #====================================================================================
-
-            # ===================== Сегодня можно не запоминать и не трогать =====================
-            if __name__ == "__main__": # Если запускаем наше приложение с помощью app.py - всё супер
-                    app.run(debug=True) # Сам запуск приложения в режиме отладки (разработки)
-            #====================================================================================
-          </pre>
+          <pre id="code__app-block"></pre>
         </div>
         <div class="code__fragment">
-                    <h2 class="code__from">home.html</h2>
-                    <pre id="code__html"></pre>
+          <h2 class="code__from">home.html</h2>
+          <pre id="code__home-block"></pre>
+        </div>
       </div>
     </main>
 
-
-        <script src="../assets/js/lessons.js"></script>
+    <script src="../assets/js/lessons.js"></script>
   </body>
 </html>

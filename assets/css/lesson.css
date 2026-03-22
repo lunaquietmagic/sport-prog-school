@@ -2,10 +2,14 @@
 
 main {
   margin-top: 5rem;
+  overflow: hidden;
 }
 
 pre {
   color: rgb(67, 255, 29);
+  display: grid;
+  /* justify-self: left; */
+  text-align: left;
 }
 
 .code {
@@ -14,7 +18,50 @@ pre {
 }
 
 .code__fragment {
+  /* max-width: 144rem; */
   background-color: rgb(0, 20, 0);
   border-radius: 1.5rem;
   padding: 4rem;
 }
+
+@media (max-width: 1536px) {
+  .code__fragment {
+    max-width: 128rem;
+  }
+}
+
+@media (max-width: 1366px) {
+  body {
+    font-size: 2rem;
+  }
+  .code__fragment {
+    max-width: 95rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 1.6rem;
+  }
+  main {
+    max-width: 70rem;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    max-width: 40rem;
+  }
+}
+
+/* @media (max-width: 480px) {
+  main {
+    max-width: 28rem;
+  }
+}
+
+@media (max-width: 320px) {
+  main {
+    max-width: 20rem;
+  }
+} */
