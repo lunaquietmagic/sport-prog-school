@@ -1,0 +1,36 @@
+.main {
+    margin-top: 4.5rem;
+}
+.main__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4rem;
+}
+.main__item {
+    padding: 2rem;
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    transition: all 0.2s ease;
+    border-left: 0.35rem solid transparent;
+    border-right: 0.35rem solid transparent;
+    border-radius: var(--border-radius);
+}
+.main__item:hover {
+    transform: scale(1.05);
+    /* background-color: rgba(24, 240, 255, 0.15); */
+    border-left: 0.35rem solid pink;
+    border-right: 0.35rem solid pink;
+    box-shadow: 0 0 2rem pink;
+}
+.main__title {
+    margin-top: 0.5rem;
+}
+.main__img {
+    width: 80%;
+    height: 15rem;
+    border-radius: var(--border-radius);
+}
+.main__info {
+    color: rgb(199, 139, 255);
+}

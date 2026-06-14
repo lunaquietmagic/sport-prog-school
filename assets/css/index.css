@@ -1,39 +1,33 @@
-@import url("base.css");
-
-body {
-  height: 100vh;
-  align-items: center;
+.main {
+    margin-top: 4.5rem;
 }
-
-h1 {
-  font-size: 6.2rem;
-  margin-bottom: 3.2rem;
-  color: var(--pink-primary-color);
+.main__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3.5rem;
 }
-
-ul {
-  min-width: 50rem;
+.main__item {
+    padding: 3rem;
+    border-radius: var(--border-radius);
+    /* background-color: #37b6fa; */
+    display: grid;
+    justify-items: center;
+    transition: all 0.2s ease;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
 }
-li {
-  margin-bottom: 0.5rem;
-  height: 3.8rem;
+.main__item:hover {
+    transform: scale(1.05);
+    /* background-color: rgba(24, 240, 255, 0.15); */
+    border-left: 0.5rem solid rgb(24, 240, 255);
+    border-right: 0.5rem solid rgb(24, 240, 255);
+    box-shadow: 0 0 2rem rgb(24, 240, 255);
 }
-
-.active {
-  color: var(--white-primary-color);
+.main__img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    height: 25rem;
 }
-.inactive {
-  color: var(--grey-inactive-color);
-}
-
-a {
-  transition: all 0.3s ease-out;
-}
-a:hover {
-  color: var(--white-primary-color);
-  font-size: 2.8rem;
-}
-
-span.lessons__imp {
-  color: var(--pink-imp-color);
+.main__title {
+    margin-top: 1rem;
 }
