@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="./assets/img/favicon.png"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="./assets/css/imports.css" />
+        <link rel="stylesheet" href="./assets/css/new_project.css" />
+        <link rel="stylesheet" href="./assets/css/building_blocks/nav.css" />
+        <title>Hackathon DB - Создание проект</title>
+    </head>
+    <body>
+        <header class="header">
+            <nav class="nav">
+                <li class="nav__item">
+                    <a href="index.html" class="nav__link nav__home">Главная</a>
+                </li>
+                <li class="nav__item">
+                    <a href="projects.html" class="nav__link nav__projects"
+                        >Проекты</a
+                    >
+                </li>
+                <li class="nav__item">
+                    <a
+                        href="knowledge.html"
+                        class="nav__link nav__knowledge nav__active"
+                        >База знаний</a
+                    >
+                </li>
+            </nav>
+        </header>
+        <main class="main">
+            <div class="platform">
+                <ul class="platform__header">
+                    <div
+                        class="platform__option platform__active"
+                        data-platform="windows"
+                    >
+                        <p class="platform__text">Windows</p>
+                    </div>
+                    <div class="platform__option" data-platform="linux">
+                        <p class="platform__text">Linux</p>
+                    </div>
+                </ul>
+                <div class="platform__content">
+                    <div class="platform__wrapper platform__windows">
+                        <h2 class="platform__block-title first">
+                            Открытие папки с проектом
+                        </h2>
+                        <div class="platform__block open_folder">
+                            <img
+                                src="./assets/img/open_folder.png"
+                                alt=""
+                                class="platform__block-img"
+                            />
+                            <div class="platform__block-container">
+                                <p class="platform__block-text">
+                                    1) Зайдите в Visual Studio Code
+                                </p>
+                                <p class="platform__block-text">
+                                    2) Нажмите на
+                                    <span class="imp"
+                                        >иконку бургерного меню</span
+                                    >
+                                </p>
+                                <p class="platform__block-text">
+                                    3) Нажмите
+                                    <span class="imp">file</span>
+                                    /
+                                    <span class="imp">файл</span>
+                                </p>
+                                <p class="platform__block-text">
+                                    4) Нажмите
+                                    <span class="imp">open folder</span>
+                                    /
+                                    <span class="imp">открыть папку</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="platform__block folder__selection">
+                            <img
+                                src="./assets/img/folder_selection.png"
+                                alt=""
+                                class="platform__block-img"
+                            />
+                            <div class="platform__block-container single-row">
+                                <p class="platform__block-text">
+                                    5) Выберите нужную папку и нажмите
+                                    <span class="imp">select</span>
+                                    /
+                                    <span class="imp">выбрать</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <h2 class="platform__block-title">
+                            Создание виртуального окружения (дом для библиотек)
+                        </h2>
+                        <div class="platform__block new_terminal">
+                            <img
+                                src="./assets/img/new_terminal.png"
+                                alt="Фото создания нового терминала"
+                                class="platform__block-img"
+                            />
+                            <div class="platform__block-container">
+                                <p class="platform__block-text">
+                                    6) Нажмите на
+                                    <span class="imp"
+                                        >иконку бургерного меню</span
+                                    >
+                                </p>
+                                <p class="platform__block-text">
+                                    7) Нажмите
+                                    <span class="imp">terminal</span>
+                                    для создания терминала со вводом команд
+                                </p>
+                                <p class="platform__block-text">
+                                    8) Нажмите
+                                    <span class="imp">new terminal</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="platform__block terminal__opened">
+                            <img
+                                src="./assets/img/terminal_opened.png"
+                                alt="Фото создания нового терминала"
+                                class="platform__block-img"
+                            />
+                            <div class="platform__block-container">
+                                <p class="platform__block-text">
+                                    Терминал открыт!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="platform__block venv_info">
+                            <div
+                                class="platform__block-container single-row-no-indents"
+                            >
+                                <p class="platform__block-text">
+                                    <span class="imp">
+                                        !! Прописываем следующие команды в
+                                        терминале</span
+                                    >
+                                </p>
+                            </div>
+                        </div>
+                        <div class="platform__block new_venv">
+                            <p class="platform__block-heading">
+                                | Создаём папку, в которой будут лежать все наши
+                                библиотеки, включая
+                                <span class="imp">flask</span>
+                            </p>
+
+                            <code class="platform__block-code"
+                                >python -m venv venv</code
+                            >
+                            <div class="platform__block-container single-row">
+                                <p class="platform__block-code-description">
+                                    <span class="imp">python</span>
+                                    - наш язык программирования
+                                </p>
+                                <p class="platform__block-code-description">
+                                    <span class="imp">-m venv</span>
+                                    - используем модуль venv (virtual
+                                    environment / виртуальное окружение), чтобы
+                                    его создать
+                                </p>
+                                <p class="platform__block-code-description">
+                                    <span class="imp">venv</span>
+                                    - название папки внутри проекта, где будет
+                                    лежать наше виртуальное окружение
+                                </p>
+                            </div>
+                        </div>
+                        <div class="platform__block new_venv">
+                            <p class="platform__block-heading">
+                                | Активируем виртуальное окружение
+                            </p>
+                            <code class="platform__block-code"
+                                >.\venv\Scripts\activate</code
+                            >
+                            <div class="platform__block-container single-row">
+                                <p class="platform__block-code-description">
+                                    <span class="imp">.\</span>
+                                    - наша текущая папка
+                                </p>
+                                <p class="platform__block-code-description">
+                                    <span class="imp"
+                                        >\venv\Scripts\activate</span
+                                    >
+                                    - путь до файла
+                                    <span class="imp">activate</span>, который
+                                    запускает наше виртуальное окружение
+                                </p>
+                            </div>
+                        </div>
+
+                        <h2 class="platform__block-title">
+                            Установка пакетов (pip)
+                        </h2>
+                        <div class="platform__block new_venv">
+                            <p class="platform__block-heading">
+                                | Устанавливаем
+                                <span class="imp">flask</span>
+                            </p>
+                            <code class="platform__block-code"
+                                >pip install flask</code
+                            >
+                            <div class="platform__block-container single-row">
+                                <p class="platform__block-code-description">
+                                    <span class="imp">pip</span>
+                                    - наш менеджер пакетов, который скачивает их
+                                    в папку
+                                    <span class="imp">venv</span>
+                                </p>
+                                <p class="platform__block-code-description">
+                                    <span class="imp">install flask</span>
+                                    - установка фреймворка
+                                    <span class="imp">flask</span>, который
+                                    нужен для создания веб-приложений
+                                </p>
+                            </div>
+                        </div>
+
+                        <h2 class="platform__block-title">
+                            Создание главного файла
+                        </h2>
+                        <div class="platform__block new__file">
+                            <img
+                                src="./assets/img/new_file.png"
+                                alt="Изображение нового файла"
+                                class="platform__block-img"
+                            />
+                            <div class="platform__block-container">
+                                <p class="platform__block-text">
+                                    6) Нажмите правой кнопкой мыши в этом окне
+                                    программы
+                                </p>
+                                <p class="platform__block-text">
+                                    7) Создайте новый файл и назовите его
+                                    <span class="imp">app.py</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="platform__block file_created">
+                            <img
+                                src="./assets/img/file_created.png"
+                                alt="Изображение созданного файла"
+                                class="platform__block-img"
+                            />
+                            <div class="platform__block-container">
+                                <p class="platform__block-text">Готово!</p>
+                            </div>
+                        </div>
+
+                        <h2 class="platform__block-title">Структура проекта</h2>
+                        <div class="platform__block project-structure">
+                            <div class="platform__block-container">
+                                <a
+                                    href="/project_structure.html"
+                                    class="platform__block-link"
+                                    ><p class="platform__block-link-text">
+                                        *Ссылка*
+                                    </p></a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="platform__wrapper platform__linux hidden">
+                        <h2 class="platform__block-title first">
+                            Открытие папки с проектом
+                        </h2>
+                        <div class="platform__block open_folder">
+                            <img
+                                src="./assets/img/open_folder.png"
+                                alt=""
+                                class="platform__block-img"
+                            />
+                            <div class="platform__block-container">
+                                <p class="platform__block-text">
+                                    1) Зайдите в Visual Studio Code
+                                </p>
+                                <p class="platform__block-text">
+                                    2) Нажмите на
+                                    <span class="imp"
+                                        >иконку бургерного меню</span
+                                    >
+                                </p>
+                                <p class="platform__block-text">
+                                    3) Нажмите
+                                    <span class="imp">file</span>
+                                    /
+                                    <span class="imp">файл</span>
+                                </p>
+                                <p class="platform__block-text">
+                                    4) Нажмите
+                                    <span class="imp">open folder</span>
+                                    /
+                                    <span class="imp">открыть папку</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="platform__block folder__selection">
+                            <img
+                                src="./assets/img/folder_selection.png"
+                                alt=""
+                                class="platform__block-img"
+                            />
+                            <div class="platform__block-container single-row">
+                                <p class="platform__block-text">
+                                    5) Выберите нужную папку и нажмите
+                                    <span class="imp">select</span>
+                                    /
+                                    <span class="imp">выбрать</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <h2 class="platform__block-title">
+                            Создание виртуального окружения (дом для библиотек)
+                        </h2>
+                        <div class="platform__block new_terminal">
+                            <img
+                                src="./assets/img/new_terminal.png"
+                                alt="Фото создания нового терминала"
+                                class="platform__block-img"
+                            />
+                            <div class="platform__block-container">
+                                <p class="platform__block-text">
+                                    6) Нажмите на
+                                    <span class="imp"
+                                        >иконку бургерного меню</span
+                                    >
+                                </p>
+                                <p class="platform__block-text">
+                                    7) Нажмите
+                                    <span class="imp">terminal</span>
+                                    для создания терминала со вводом команд
+                                </p>
+                                <p class="platform__block-text">
+                                    8) Нажмите
+                                    <span class="imp">new terminal</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="platform__block terminal__opened">
+                            <img
+                                src="./assets/img/terminal_opened.png"
+                                alt="Фото создания нового терминала"
+                                class="platform__block-img"
+                            />
+                            <div class="platform__block-container">
+                                <p class="platform__block-text">
+                                    Терминал открыт!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="platform__block venv_info">
+                            <div
+                                class="platform__block-container single-row-no-indents"
+                            >
+                                <p class="platform__block-text">
+                                    <span class="imp">
+                                        !! Прописываем следующие команды в
+                                        терминале</span
+                                    >
+                                </p>
+                            </div>
+                        </div>
+                        <div class="platform__block new_venv">
+                            <p class="platform__block-heading">
+                                | Создаём папку, в которой будут лежать все наши
+                                библиотеки, включая
+                                <span class="imp">flask</span>
+                            </p>
+
+                            <code class="platform__block-code"
+                                >python3 -m venv venv</code
+                            >
+                            <div class="platform__block-container single-row">
+                                <p class="platform__block-code-description">
+                                    <span class="imp">python3</span>
+                                    - наш язык программирования
+                                </p>
+                                <p class="platform__block-code-description">
+                                    <span class="imp">-m venv</span>
+                                    - используем модуль venv (virtual
+                                    environment / виртуальное окружение), чтобы
+                                    его создать
+                                </p>
+                                <p class="platform__block-code-description">
+                                    <span class="imp">venv</span>
+                                    - название папки внутри проекта, где будет
+                                    лежать наше виртуальное окружение
+                                </p>
+                            </div>
+                        </div>
+                        <div class="platform__block new_venv">
+                            <p class="platform__block-heading">
+                                | Активируем виртуальное окружение
+                            </p>
+                            <code class="platform__block-code"
+                                >source venv/bin/activate</code
+                            >
+                            <div class="platform__block-container single-row">
+                                <p class="platform__block-code-description">
+                                    <span class="imp">source</span>
+                                    - запускаем следующий скрипт
+                                </p>
+                                <p class="platform__block-code-description">
+                                    <span class="imp">venv/bin/activate</span>
+                                    - путь до файла
+                                    <span class="imp">activate</span>, который
+                                    запускает наше виртуальное окружение
+                                </p>
+                            </div>
+                        </div>
+
+                        <h2 class="platform__block-title">
+                            Установка пакетов (pip)
+                        </h2>
+                        <div class="platform__block new_venv">
+                            <p class="platform__block-heading">
+                                | Устанавливаем
+                                <span class="imp">flask</span>
+                            </p>
+                            <code class="platform__block-code"
+                                >pip install flask</code
+                            >
+                            <div class="platform__block-container single-row">
+                                <p class="platform__block-code-description">
+                                    <span class="imp">pip</span>
+                                    - наш менеджер пакетов, который скачивает их
+                                    в папку
+                                    <span class="imp">venv</span>
+                                </p>
+                                <p class="platform__block-code-description">
+                                    <span class="imp">install flask</span>
+                                    - установка фреймворка
+                                    <span class="imp">flask</span>, который
+                                    нужен для создания веб-приложений
+                                </p>
+                            </div>
+                        </div>
+
+                        <h2 class="platform__block-title">
+                            Создание главного файла
+                        </h2>
+                        <div class="platform__block new__file">
+                            <img
+                                src="./assets/img/new_file.png"
+                                alt="Изображение нового файла"
+                                class="platform__block-img"
+                            />
+                            <div class="platform__block-container">
+                                <p class="platform__block-text">
+                                    6) Нажмите правой кнопкой мыши в этом окне
+                                    программы
+                                </p>
+                                <p class="platform__block-text">
+                                    7) Создайте новый файл и назовите его
+                                    <span class="imp">app.py</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="platform__block file_created">
+                            <img
+                                src="./assets/img/file_created.png"
+                                alt="Изображение созданного файла"
+                                class="platform__block-img"
+                            />
+                            <div class="platform__block-container">
+                                <p class="platform__block-text">Готово!</p>
+                            </div>
+                        </div>
+
+                        <h2 class="platform__block-title">Структура проекта</h2>
+                        <div class="platform__block project-structure">
+                            <div class="platform__block-container">
+                                <a
+                                    href="/project_structure.html"
+                                    class="platform__block-link"
+                                    ><p class="platform__block-link-text">
+                                        *Ссылка*
+                                    </p></a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script src="./assets/js/new_project.js"></script>
+    </body>
+</html>

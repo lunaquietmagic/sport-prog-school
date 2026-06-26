@@ -1,0 +1,15 @@
+.main {
+    margin-top: 5rem;
+}
+.sql__link {
+    color: var(--pink-imp-color);
+}
+.sql__block {
+    margin-top: 2rem;
+}
+.sql__row.code {
+    color: var(--green-imp-color);
+}
+.tab {
+    margin-left: 5rem;
+}

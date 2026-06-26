@@ -1,0 +1,30 @@
+.main {
+    margin: 5rem 0;
+}
+
+.project {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    background-color: #0e0e0e;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    box-shadow: 0 0 1rem rgba(229, 229, 229, 0.15);
+}
+.project__content {
+    padding: 3.5rem 2.5rem;
+}
+.default__code {
+    margin-top: 1.5rem;
+    padding: 3rem;
+    border-radius: var(--border-radius);
+    background-color: #0e0e0e;
+    box-shadow: 0 0 1rem rgba(229, 229, 229, 0.15);
+}
+.default__title {
+    margin-top: 3.5rem;
+}
+.default__line.tab {
+    margin-left: 3rem;
+}
+.default__line {
+    color: var(--purple-text);
+}

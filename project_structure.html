@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="./assets/img/favicon.png"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="./assets/css/imports.css" />
+        <link rel="stylesheet" href="./assets/css/project_structure.css" />
+        <link rel="stylesheet" href="./assets/css/building_blocks/nav.css" />
+        <title>Hackathon DB - Проекты</title>
+    </head>
+    <body>
+        <header class="header">
+            <nav class="nav">
+                <li class="nav__item">
+                    <a href="index.html" class="nav__link nav__home">Главная</a>
+                </li>
+                <li class="nav__item">
+                    <a href="projects.html" class="nav__link nav__projects"
+                        >Проекты</a
+                    >
+                </li>
+                <li class="nav__item">
+                    <a
+                        href="knowledge.html"
+                        class="nav__link nav__knowledge nav__active"
+                        >База знаний</a
+                    >
+                </li>
+            </nav>
+        </header>
+        <main class="main">
+            <div class="project">
+                <img
+                    src="./assets/img/project_structure.png"
+                    alt="Фото структуры проекта"
+                    class="project__img"
+                />
+                <div class="project__content">
+                    <p class="project__text">
+                        <span class="imp">static</span> - папка с файлами,
+                        которые не будут автоматически изменяться
+                    </p>
+                    <p class="project__text">
+                        <span class="imp">css</span> - папка со стилями для
+                        страниц
+                    </p>
+                    <p class="project__text">
+                        <span class="imp">img</span> - папка с изображениями
+                    </p>
+                    <p class="project__text">
+                        <span class="imp">templates</span> - папка с HTML
+                        шаблонами (фундаментом из тегов по типу
+                        <span class="imp">&lt;a&gt;</span>)
+                    </p>
+                    <p class="project__text">
+                        <span class="imp">venv</span> - папка с виртуальным
+                        окружением проекта, где находятся все
+                        библиотеки/фреймворки (<span class="imp">flask</span>,
+                        ...)
+                    </p>
+                    <p class="project__text">
+                        <span class="imp">app.py</span> - главный файл нашего
+                        проекта (веб-приложения)
+                    </p>
+                </div>
+            </div>
+
+            <div class="default">
+                <h3 class="default__title">
+                    Стандартная основа файла <span class="imp">app.py</span>
+                </h3>
+                <div class="default__code">
+                    <p class="default__line">
+                        from <span class="imp">flask</span> import
+                        <span class="imp">Flask</span>,
+                        <span class="imp">render_template</span>
+                    </p>
+                    <p class="default__line">
+                        app = <span class="imp">Flask</span>(<span class="imp"
+                            >__file__</span
+                        >)
+                    </p>
+                    <br />
+                    <p class="default__line">
+                        @app.route(<span class="imp">"/"</span>)
+                    </p>
+                    <p class="default__line">
+                        def <span class="imp">home()</span>:
+                    </p>
+                    <p class="default__line tab">
+                        return
+                        <span class="imp">render_template(</span
+                        >"home.html"<span class="imp">)</span>
+                    </p>
+                    <br />
+                    <p class="default__line">
+                        if <span class="imp">__name__</span> ==
+                        <span class="imp">"__main__"</span>:
+                    </p>
+                    <p class="default__line tab">
+                        app.run(<span class="imp">debug=True</span>)
+                    </p>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

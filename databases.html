@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="./assets/img/favicon.png"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="./assets/css/imports.css" />
+        <link rel="stylesheet" href="./assets/css/databases.css" />
+        <link rel="stylesheet" href="./assets/css/building_blocks/nav.css" />
+        <title>Hackathon DB - Проекты</title>
+    </head>
+    <body>
+        <header class="header">
+            <nav class="nav">
+                <li class="nav__item">
+                    <a href="index.html" class="nav__link nav__home">Главная</a>
+                </li>
+                <li class="nav__item">
+                    <a href="projects.html" class="nav__link nav__projects"
+                        >Проекты</a
+                    >
+                </li>
+                <li class="nav__item">
+                    <a
+                        href="knowledge.html"
+                        class="nav__link nav__knowledge nav__active"
+                        >База знаний</a
+                    >
+                </li>
+            </nav>
+        </header>
+        <main class="main">
+            <div class="sql">
+                <div class="sql__block docs">
+                    <p class="sql__text">
+                        SQL документация (все нужные разделы слева)
+                    </p>
+                    <a
+                        href="https://www.schoolsw3.com/sql/sql_syntax.php"
+                        target="_blank"
+                        class="sql__link"
+                        >*ссылка*</a
+                    >
+                </div>
+                <div class="sql__block">
+                    <li class="sql__code">
+                        <p class="sql__row"># Загрузка модуля с базой данных</p>
+                        <p class="sql__row code">import sqlite3</p>
+
+                        <p class="sql__row">
+                            # Подключение к файлу базы данных/его создание
+                        </p>
+                        <p class="sql__row">
+                            # con - connection/соединение с нашей базой данных
+                        </p>
+                        <p class="sql__row code">
+                            with sqlite3.connect("project.db") as con:
+                        </p>
+
+                        <p class="sql__row tab">
+                            # Создание курсора, с помощью которого мы будем
+                            управлять базой данных
+                        </p>
+                        <p class="sql__row code tab">cur = con.cursor()</p>
+
+                        <p class="sql__row tab"># Изменение данных в таблице</p>
+                        <p class="sql__row code tab">
+                            cursor.execute("INSERT INTO clients (name, money)
+                            VALUES (?, ?)",
+                            (name_of_our_client,his_money_balance ))
+                        </p>
+                        <p class="sql__row tab">
+                            # cursor.execute - обращение к базе данных
+                        </p>
+                        <p class="sql__row tab">
+                            # INSERT INTO clients (name, money) - вносим нового
+                            клиента в таблицу clients и задаём ТОЛЬКО имя
+                            клиента и его баланс
+                        </p>
+                        <p class="sql__row tab">
+                            # VALUES (?, ?) - вносим данные из переменных,
+                            которые добавим следующим действием
+                        </p>
+                        <p class="sql__row tab">
+                            # (name_of_our_client,his_money_balance ) - а именно
+                            имя клиента из нашей программы и его баланс
+                        </p>
+                        <p class="sql__row code tab">con.commit()</p>
+                        <p class="sql__row tab">
+                            # ОБЯЗАТЕЛЬНО применяем все изменения, а иначе
+                            данные не сохранятся в таблице (если мы просто
+                            получаем данные, то commit нам не нужен)
+                        </p>
+                    </li>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
